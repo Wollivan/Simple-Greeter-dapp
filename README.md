@@ -5,6 +5,8 @@ Once connecting, you can then run a function on the Greeter contract.
 
 Try running some of the following tasks:
 
+Create a .env file in the root folder and put your RINKEBY_URL and PRIVATE_KEY in there.
+
 Run the following commands to set up:
 
 ```
