@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  height: 100vh;
+}
+button {
+  padding: 2rem;
+  border: none;
+  background-color: #fff;
+  color: #68ad32;
+}
+button:hover {
+  background-color: #68ad32;
+  color: #fff;
+  cursor: pointer;
+}
