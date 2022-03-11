@@ -15,7 +15,6 @@ export default function App() {
     if (ethereum) {
       //try to connect immediatly, if that fails, address won't be set and the button to manually connect will be shown
       handleLinkWallet();
-      getUserDetails();
     }
   }, []);
 
@@ -33,6 +32,7 @@ export default function App() {
       .request({ method: "eth_requestAccounts" })
       .then(() => {
         console.log("Wallet linked successfully");
+        // here we put the address details into state to use later
         getUserDetails();
       })
       .catch((error) => {
@@ -53,7 +53,8 @@ export default function App() {
     // here we set the address from the  signer
     setAddress(walletAddress);
   }
-  // this is the same function that Al wrote, its just using theProvider rather than provider becasue we know its set at the point of being able to click the button
+  // This is an example of calling a fucntion on a contract
+  // its just using theProvider rather than provider becasue we know its set at the point of being able to click the button
   async function getGreetingFromGreeter() {
     // here we use theProvider rather than provider, because we know its set
     const signer = await theProvider.getSigner();
@@ -77,9 +78,7 @@ export default function App() {
   } else {
     return (
       <div className="App">
-        <button onClick={handleLinkWallet} walletAddress>
-          Link wallet
-        </button>
+        <button onClick={handleLinkWallet}>Link wallet</button>
       </div>
     );
   }
