@@ -78,7 +78,9 @@ export default function App() {
   } else {
     return (
       <div className="App">
-        <button onClick={handleLinkWallet}>Link wallet</button>
+        <button onClick={handleLinkWallet}>
+          Link wallet (you need to be on Rinkeby Test Network)
+        </button>
       </div>
     );
   }
